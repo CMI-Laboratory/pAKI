@@ -35,15 +35,18 @@ Machine learning model training and evaluation workflows are implemented in **`p
 Key components include:
 - **Ensemble model construction** — integration of multiple classifiers including XGBoost, Random Forest, and Extra Trees Classifier
 - **Temporal validation strategy** — train/validation split with 1-year prospective test set
+- **Patient characteristics analysis** — statistical comparison of baseline and perioperative characteristics between AKI and non-AKI groups
 
 ---
 
 ## 🔍 Performance Evaluation
 
 Model performance assessment includes:
-- **AUROC and AUPRC** — discrimination metrics for binary classification
-- **Comparison with clinical scores** — benchmarking against Thakar Score
-- **Stratified evaluation** — performance across different perioperative phases
+- **Discrimination metrics** — AUROC and AUPRC for binary classification
+- **Classification metrics** — accuracy, sensitivity, specificity, PPV, NPV, and F1-score
+- **Bootstrap analysis** — 95% confidence intervals for all performance metrics using bootstrap resampling
+- **Net Reclassification Improvement (NRI)** — improvement in risk classification compared to baseline clinical models
+- **Clinical outcomes** — adjusted odds ratios (OR) for in-hospital mortality (IHM) 
 
 Performance evaluation code is integrated within **`pAKI_analysis.ipynb`**.
 
@@ -91,6 +94,3 @@ to be updated
 
 ---
 
-## 📧 Contact
-
-For questions or issues regarding the code, please open an issue in this repository or contact the corresponding author.
